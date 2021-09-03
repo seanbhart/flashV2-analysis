@@ -6,7 +6,7 @@
 virtualenv .flashV2-analysis
 source .flashV2-analysis/bin/activate
 git init
-pip install jupyterlab jupyterthemes jupyterlab_darkside_ui cadCAD cadCAD_diagram matplotlib pandas plotly ipywidgets numpy networkx scipy seaborn python-dotenv psycopg2 psycopg2-binary
+pip install jupyterlab jupyterthemes jupyterlab_darkside_ui cadCAD cadCAD_diagram matplotlib pandas plotly ipywidgets numpy networkx scipy seaborn python-dotenv psycopg2 psycopg2-binary statsmodels
 jupyter labextension install jupyterlab-plotly
 python -m ipykernel install --user --name=.flashV2-analysis
 ```
