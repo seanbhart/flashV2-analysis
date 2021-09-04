@@ -55,7 +55,7 @@ GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO flashv2admin;
 ```
 
 ```
-CREATE TABLE uniswap (date text,
+CREATE TABLE uniswap (date date,
     liquidity decimal,
     value decimal,
     price decimal
