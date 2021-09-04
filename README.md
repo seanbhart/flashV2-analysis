@@ -53,3 +53,12 @@ CREATE TABLE stakes (FromAddress text,
 );
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO flashv2admin;
 ```
+
+```
+CREATE TABLE uniswap (date text,
+    liquidity decimal,
+    value decimal,
+    price decimal
+);
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO flashv2admin;
+```
