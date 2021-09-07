@@ -28,6 +28,12 @@ createdb flashv2
 psql flashv2
 ```
 
+When ready to delete:
+
+```
+dropdb flashv2
+```
+
 Create the database admin and add privileges:
 
 ```
@@ -59,6 +65,20 @@ CREATE TABLE uniswap (date date,
     liquidity decimal,
     value decimal,
     price decimal
+);
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO flashv2admin;
+```
+
+```
+CREATE TABLE uniswaptx (UnixTimestamp timestamp,
+    DateTime date,
+    FromAddress text,
+    direction text,
+    ToAddress text,
+    Value decimal,
+    ContractAddress text,
+    TokenName text,
+    TokenSymbol text
 );
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO flashv2admin;
 ```
