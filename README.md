@@ -83,3 +83,15 @@ CREATE TABLE uniswaptx (DateTime date,
 );
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO flashv2admin;
 ```
+
+```
+CREATE TABLE ethpx (Date date,
+    Open decimal,
+    High decimal,
+    Low decimal,
+    Close decimal,
+    Volume decimal,
+    MarketCap decimal
+);
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO flashv2admin;
+```

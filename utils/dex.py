@@ -49,3 +49,27 @@ def uniswap_tx_to_db(filename):
 
                 line_count += 1
         print(f'Processed {line_count} lines.')
+
+def ethpx_to_db(filename):
+    with open(filename) as csv_file:
+        csv_reader = csv.reader(csv_file, delimiter=',')
+        line_count = 0
+        for row in csv_reader:
+            if line_count == 0:
+                print(f'Column names are {", ".join(row)}')
+                line_count += 1
+            else:
+                Date = None if row[0]=='NULL' else str(row[0])
+                Open = None if row[1]=='NULL' else str(row[1])
+                High = None if row[2]=='NULL' else str(row[2])
+                Low = None if row[3]=='NULL' else str(row[3])
+                Close = None if row[4]=='NULL' else str(row[4])
+                Volume = None if row[5]=='NULL' else str(row[5])
+                MarketCap = None if row[6]=='NULL' else str(row[6])
+                query = ("INSERT INTO ethpx"
+                            " (Date,Open,High,Low,Close,Volume,MarketCap)"
+                            " VALUES (%s, %s, %s, %s, %s, %s, %s)")
+                db.sql(query, (Date,Open,High,Low,Close,Volume,MarketCap,))
+
+                line_count += 1
+        print(f'Processed {line_count} lines.')
