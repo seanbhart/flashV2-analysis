@@ -18,6 +18,7 @@ jupyter-lab
 jupyter notebook [OLD]
 jupyter nbconvert --to pdf --template hidecode [notebook filename]
 jupyter nbconvert --to latex --no-input FlashV2_Analysis.ipynb
+jupyter nbconvert FlashV2_Analysis.ipynb --no-input
 ```
 
 ## POSTGRES
