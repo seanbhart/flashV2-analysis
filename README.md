@@ -69,9 +69,10 @@ CREATE TABLE uniswap (date date,
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO flashv2admin;
 ```
 
+TODO: Include the timestamp: UnixTimestamp timestamp,
+
 ```
-CREATE TABLE uniswaptx (UnixTimestamp timestamp,
-    DateTime date,
+CREATE TABLE uniswaptx (DateTime date,
     FromAddress text,
     direction text,
     ToAddress text,
