@@ -16,6 +16,8 @@ python -m ipykernel install --user --name=.flashV2-analysis
 ```
 jupyter-lab
 jupyter notebook [OLD]
+jupyter nbconvert --to pdf --template hidecode [notebook filename]
+jupyter nbconvert --to pdf --template hidecode FlashV2_Analysis.ipynb
 ```
 
 ## POSTGRES
